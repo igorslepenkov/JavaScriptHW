@@ -1,108 +1,121 @@
-//-------------------------------------------Java script homework ------------------------------
-// ------------------------------------------Task1----------------------------------------------
-// let x = 20;  
-// let y = 58;    
-// let z = 42;
+//------------------------------------Task1-------------------------------------------
+// let str = 'true';
+// let boolean = false;
+// let num = 17;
+// let und = undefined;
+// let nu = null;
+// let arr =[str, boolean, num, und, nu];
+// arr.forEach((item)=>console.log(typeof(item)));
+//-------------------------------------Task2-------------------------------------------
+// let height = 15;
+// let width = 20;
+// height > width ? console.log(height):console.log(width);
+//-------------------------------------Task3--------------------------------------------
 
-// console.log(x + y + z);
-
-//------------------------------------------ Task2------------------------------------------------
-// { 
-// const secInMinute = 60;
-// const minInHour = 60;
-// const hoursInDay = 24;
-// const daysInYear = 365;
-
-// const myAge = 24;
-
-// const myAgeInSeconds = 24*daysInYear*hoursInDay*minInHour*secInMinute;
-// console.log(myAgeInSeconds);
+// for(let i=1; i<=20; i++) {
+//     if(i%3===0) {
+//         console.log(i);
+//     };
 // };
 
-// {
-// const myBirthDate = new Date(1997, 6, 31, 3);
-// const currentDate = new Date();
-// const msInSecond = 1000;
-// let myAgeInSeconds = (currentDate - myBirthDate)/msInSecond; //My current age in seconds
+//------------------------------------Task4---------------------------------------------
+// let key = true
+// let documents = true
+// let pen = true
+// let apple = false
+// let orange = true
+// let shouldGoToWork = apple||orange&&key&&documents&&pen;
+// console.log(shouldGoToWork);
 
-// const secInMinute = 60;
-// const minInHour = 60;
-// const hoursInDay = 24;
-// const daysInYear = 365;
+//------------------------------------Task5---------------------------------------------
 
-// let myAge = Math.floor(myAgeInSeconds/secInMinute/minInHour/hoursInDay/daysInYear); //My current age in years
-// console.log(myAgeInSeconds);
-// console.log(myAge);
-// };
-//----------------------------------------------Task3--------------------------------------------------------------
-
-// let count = 42; // initially number 
-// let string = `${count}`; // string
-// let string2 = count.toString(); //string
-
-// let userName = count; //number
-
-// userName = '42'; //string
-// let number = Number(userName); //number
-
-//------------------------------------------------Task4-------------------------------------------------------------
-// let a = 1;  
-// let b = 2;  
-// let c = " белых медведей";
-
-// console.log(a+(b+c));
-
-//------------------------------------------------Task5---------------------------------------------------------------
-// // let a = "доступ";
-// // let b = "морпех";
-// // let c = "наледь";
-// // let d = "попрек";
-// // let e = "рубило";
-
-// // let lengthWords = a.length + b.length + c.length + d.length + e.length; // 30
-// var2
-// let arr = [a, b, c, d, e];
-// let result = arr.map((item) => item = item.length).reduce((sum, item) => sum += item); //30
-
-//-----------------------------------------------Task6----------------------------------------------------------------
-
-// let number = 53;
-// let boolean = true;
-// let obj = {
-//     name: 'object',
-//     property: null,
+// let num = prompt("Enter your number");
+// if (num % 3 === 0 && num % 5 === 0) {
+//     alert('fizzbuzz');
+// } else if ((num % 5) === 0) {
+//     alert('buzz');
+// } else if ((num % 3) === 0) {
+//     alert('fizz');
+// } else {
+//     alert("It doesn't match any");
 // };
 
-// console.log(`Variable: ${number} have type: ${typeof number}`);
-// console.log(`Variable: ${boolean} have type: ${typeof boolean}`);
-// console.log(`Variable: ${obj} have type: ${typeof obj}`);
+//--------------------------------------Task6----------------------------------------------
 
-//--------------------------------------------Task7-------------------------------------------------------------------
-// let userName = prompt('Name', 'Please enter your name');
-// let age = prompt('Age', 'Please enter your age');
-// console.log(`User:${userName}, age:${age}`);
+// let age = prompt('Сколько тебе лет?');
+// if(age>=16 && age<18) {
+//     alert('Можешь выкурить сигаретку, только маме не говори');
+// } else if(age>=18) {
+//     alert('Попей пивка');
+// } else {
+//     alert('Пей колу');
+// };
 
-//--------------------------------------------Advanced task1-------------------------------------------------------------
-// let a = 4;
-// let b = 3;
+//-------------------------------------Task7------------------------------------------------
 
-//var1
+// let direction = prompt('Введите своё направление');
+// switch(direction) {
+//     case 'юг':
+//         alert('на юг пойдешь счастье найдешь')
+//         break
+//     case 'север':
+//         alert('на север пойдешь много денег найдешь')
+//         break
+//     case 'запад':
+//         alert('на запад пойдешь верного друга найдешь')
+//         break
+//     case 'восток':
+//         alert('на восток пойдешь разработчиком станешь')
+//         break
+//     default: 
+//         alert('Твоё направление никому не понятно')
+// };
 
-// [b,a] = [a,b];
+//-----------------------------------Advanced task1----------------------------------------------
 
-//var2
+// let str = 'пОлИнА нАбЕрЕжНаЯ';
+// function sayHello(string) {
+//     let arr = string.toLowerCase().split(' ');
+//     let result = arr.map((el) => {
+//         return el[0].toUpperCase() + el.slice(1);
+//     }).join(' ');
+//     return `Привет, ${result}!`;
+// }
 
-// a=a+b;
-// b=a-b;
-// a=a-b;
-// console.log(a, b);
+// alert(sayHello(str))
 
-//--------------------------------------------Advanced task2----------------------------------------------------------------
-// let codeWord1 = "обернись";
-// let codeWord2 = "неужели";
-// let codeWord3 = "огурцы";
-// let codeWord4 = "липкие";
-// let codeWord5 = "?!"; 
+//----------------------------------Advanced task2-----------------------------------------------
+// const num = prompt("Введите число");
 
-// let cipher = [codeWord1, codeWord2, codeWord3, codeWord4, codeWord5].map((item) => item=item[1]).join('');
-// console.log(cipher);
+// let result = ((((num 
+//     - +prompt('Какое число отнять?'))
+//     + +prompt("Какое число прибавить?"))
+//     * +prompt("На какое число умножить?"))
+//     / +prompt("На какое число разделить?"));
+
+// alert(`Результат равен ${Math.round(result)}`);
+
+//---------------------------------Advanced task3------------------------------------------------
+// for(let i = 0; i<=6; i++) {
+//     let str = ""
+//     console.log(str='#'.repeat(i));
+// };
+
+//---------------------------------Extra task CW----------------------------------------------------
+// const str = "Adgre2321 A1sad! A2A3A4 fv3fdv3J544K5L@";
+// function stringClean(s) {
+
+//     let arr = s.split('');
+
+//     let newStr = arr.filter((item) => {
+//         let regex = /[\D\s]/;
+//         let bool = regex.test(item);
+//         return bool;
+//     }).join('');
+
+//     return newStr;
+// }
+// console.log(stringClean(str));
+
+//----------------------------------Other CW solutions-----------------------------------------------
+//https://www.codewars.com/users/IgorSlepenkov/completed_solutions
