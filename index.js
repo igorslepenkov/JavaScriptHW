@@ -1,121 +1,112 @@
-//------------------------------------Task1-------------------------------------------
-// let str = 'true';
-// let boolean = false;
-// let num = 17;
-// let und = undefined;
-// let nu = null;
-// let arr =[str, boolean, num, und, nu];
-// arr.forEach((item)=>console.log(typeof(item)));
-//-------------------------------------Task2-------------------------------------------
-// let height = 15;
-// let width = 20;
-// height > width ? console.log(height):console.log(width);
-//-------------------------------------Task3--------------------------------------------
+//=================================Task 1======================================
+// const sum = (num)=>{
+//     let sum=0;
+//     for(let i = 0; i<=num; i++){
+//         sum+=i;
+//     };
+//     return sum;
+// };
+// console.log(sum(100));
 
-// for(let i=1; i<=20; i++) {
-//     if(i%3===0) {
-//         console.log(i);
+//================================Task2========================================
+// const loanOverpayment = (loanSum, percentsPerYear, years) =>{
+//     return (((loanSum*percentsPerYear)/100)*years);
+// };
+// console.log(loanOverpayment(5000, 17, 5)) //4250
+
+//===============================Task3=========================================
+// const trimString =(string, start, end) =>{
+//     return string.substring(start, end+1);
+// };
+// const str = 'Can you hel me?';
+// console.log(trimString(str, 0, 6)); //Can you
+
+//===============================Task4=========================================
+// const getSumNumbers = (number) => {
+//     return number.toString().split('').map((item)=>+item).reduce( (sum, current) => sum + current, 0);
+// };
+
+// console.log(getSumNumbers(2021)); //5
+
+//===============================Task5============================================
+
+// const getSum = (a, b) =>{
+//     const getRes = (start, end) => {
+//         let sum=0;
+//         for(let i = start; i<=end; i++) {
+//             sum+=i;
+//         };
+//         return sum;
+//     };
+
+//     if(a===b) {
+//         return a;
+//     }else if(a>b) {
+//         return getRes(b, a);
+//     }else {
+//         return getRes(a, b);
 //     };
 // };
 
-//------------------------------------Task4---------------------------------------------
-// let key = true
-// let documents = true
-// let pen = true
-// let apple = false
-// let orange = true
-// let shouldGoToWork = apple||orange&&key&&documents&&pen;
-// console.log(shouldGoToWork);
+// console.log(getSum(1, 0))     // 1 + 0 = 1
+// console.log(getSum(1, 2))    // 1 + 2 = 3
+// console.log(getSum(0, 1))    // 0 + 1 = 1
+// console.log(getSum(1, 1))   // 1 Since both are same
+// console.log(getSum(-1, 0)) // -1 + 0 = -1
+// console.log(getSum(-1, 2)) // -1 + 0 + 1 + 2 = 2
 
-//------------------------------------Task5---------------------------------------------
+//================================Task6============================================
+// const foo = () => console.log(foo.name);
+// const boo = () => console.log(boo.name);
+// const fooboo = (bool, foo, boo) => {
+//     bool===true ?foo():boo();
+// };
+// fooboo(true, foo, boo); //foo
+// fooboo(false, foo, boo); //boo
 
-// let num = prompt("Enter your number");
-// if (num % 3 === 0 && num % 5 === 0) {
-//     alert('fizzbuzz');
-// } else if ((num % 5) === 0) {
-//     alert('buzz');
-// } else if ((num % 3) === 0) {
-//     alert('fizz');
-// } else {
-//     alert("It doesn't match any");
+//================================Advanced Task1=============================================
+
+// const isTrianglePossible= (a, b, c) =>{
+//     return (a+b)>c && (b+c)>a && (a+c)>b;
+// };
+// console.log(isTrianglePossible(2, 4, 5)); //true
+// console.log(isTrianglePossible(1, 1, 2)); //false
+
+//=================================Advanced Task2==============================================
+
+// const getChocolateBreakoffs = (n, m) =>{
+//     if(!n || !m || n<=0 || m<=0) return 0;
+//     return n*m-1;
+// };
+// console.log(getChocolateBreakoffs(5,5));
+
+//==================================Advanced Task3==============================================
+
+// const buyTelephones = () =>{
+//     let depositeBalance = Number(Number(prompt('Enter your deposite balance')).toFixed(2));
+//     console.log(depositeBalance, typeof(depositeBalance));
+//     while(depositeBalance > 0) {
+//         alert( `Your deposite balance is ${depositeBalance}$`);
+//         const telephoneCost = Number(Number(prompt('Enter new telephone cost', '$$$')).toFixed(2));
+//         const accessoryCost = Number(Number(prompt('Enter accessory cost','$$$')).toFixed(2));
+//         if(!telephoneCost||!accessoryCost) {
+//             confirm('You have entered wrong data, please try again'); 
+//             continue;
+//         }else if( telephoneCost+accessoryCost > depositeBalance) {
+//             if(confirm('You do not have enough money!!! Try to find something cheaper or go home!')){
+//                 continue;
+//             } else break;
+//         } else {
+//             depositeBalance = Number((depositeBalance - (telephoneCost+accessoryCost)).toFixed(2));
+//             alert(`You have bougth a new telephone!!! Your deposite balance is ${depositeBalance}$`)
+//             if(confirm('Do you want to go home now?')) {
+//                 return;
+//             } else continue;
+//         };
+//     };
 // };
 
-//--------------------------------------Task6----------------------------------------------
+// buyTelephones();
 
-// let age = prompt('Сколько тебе лет?');
-// if(age>=16 && age<18) {
-//     alert('Можешь выкурить сигаретку, только маме не говори');
-// } else if(age>=18) {
-//     alert('Попей пивка');
-// } else {
-//     alert('Пей колу');
-// };
-
-//-------------------------------------Task7------------------------------------------------
-
-// let direction = prompt('Введите своё направление');
-// switch(direction) {
-//     case 'юг':
-//         alert('на юг пойдешь счастье найдешь')
-//         break
-//     case 'север':
-//         alert('на север пойдешь много денег найдешь')
-//         break
-//     case 'запад':
-//         alert('на запад пойдешь верного друга найдешь')
-//         break
-//     case 'восток':
-//         alert('на восток пойдешь разработчиком станешь')
-//         break
-//     default: 
-//         alert('Твоё направление никому не понятно')
-// };
-
-//-----------------------------------Advanced task1----------------------------------------------
-
-// let str = 'пОлИнА нАбЕрЕжНаЯ';
-// function sayHello(string) {
-//     let arr = string.toLowerCase().split(' ');
-//     let result = arr.map((el) => {
-//         return el[0].toUpperCase() + el.slice(1);
-//     }).join(' ');
-//     return `Привет, ${result}!`;
-// }
-
-// alert(sayHello(str))
-
-//----------------------------------Advanced task2-----------------------------------------------
-// const num = prompt("Введите число");
-
-// let result = ((((num 
-//     - +prompt('Какое число отнять?'))
-//     + +prompt("Какое число прибавить?"))
-//     * +prompt("На какое число умножить?"))
-//     / +prompt("На какое число разделить?"));
-
-// alert(`Результат равен ${Math.round(result)}`);
-
-//---------------------------------Advanced task3------------------------------------------------
-// for(let i = 0; i<=6; i++) {
-//     let str = ""
-//     console.log(str='#'.repeat(i));
-// };
-
-//---------------------------------Extra task CW----------------------------------------------------
-// const str = "Adgre2321 A1sad! A2A3A4 fv3fdv3J544K5L@";
-// function stringClean(s) {
-
-//     let arr = s.split('');
-
-//     let newStr = arr.filter((item) => {
-//         let regex = /[\D\s]/;
-//         let bool = regex.test(item);
-//         return bool;
-//     }).join('');
-
-//     return newStr;
-// }
-// console.log(stringClean(str));
-
-//----------------------------------Other CW solutions-----------------------------------------------
-//https://www.codewars.com/users/IgorSlepenkov/completed_solutions
+//==================================Codewars tasks=============================================
+// https://www.codewars.com/users/IgorSlepenkov/completed_solutions
