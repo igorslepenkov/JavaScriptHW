@@ -84,20 +84,23 @@
 
 // const buyTelephones = () =>{
 //     let depositeBalance = Number(Number(prompt('Enter your deposite balance')).toFixed(2));
-//     console.log(depositeBalance, typeof(depositeBalance));
+//     const taxRate = 5;
+//     const getTax = (sum) => Number(((sum*taxRate)/100).toFixed(2));
 //     while(depositeBalance > 0) {
 //         alert( `Your deposite balance is ${depositeBalance}$`);
 //         const telephoneCost = Number(Number(prompt('Enter new telephone cost', '$$$')).toFixed(2));
 //         const accessoryCost = Number(Number(prompt('Enter accessory cost','$$$')).toFixed(2));
+//         const taxSum = getTax(telephoneCost+accessoryCost);
+//         console.log(taxSum, typeof(taxSum));
 //         if(!telephoneCost||!accessoryCost) {
 //             confirm('You have entered wrong data, please try again'); 
 //             continue;
-//         }else if( telephoneCost+accessoryCost > depositeBalance) {
+//         }else if( telephoneCost+accessoryCost+taxSum > depositeBalance) {
 //             if(confirm('You do not have enough money!!! Try to find something cheaper or go home!')){
 //                 continue;
 //             } else break;
 //         } else {
-//             depositeBalance = Number((depositeBalance - (telephoneCost+accessoryCost)).toFixed(2));
+//             depositeBalance = Number((depositeBalance - (telephoneCost+accessoryCost+taxSum)).toFixed(2));
 //             alert(`You have bougth a new telephone!!! Your deposite balance is ${depositeBalance}$`)
 //             if(confirm('Do you want to go home now?')) {
 //                 return;
